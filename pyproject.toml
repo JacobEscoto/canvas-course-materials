@@ -1,0 +1,24 @@
+[project]
+name = "canvas-course-materials"
+version = "0.1.0"
+description = "Download a course materials in Canvas LMS to a folder"
+readme = "README.md"
+authors = [
+    { name = "JacobEscoto", email = "djacobescotoz@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pathvalidate>=3.3.1",
+    "platformdirs>=4.14.5",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+    "rich>=14.1.0",
+    "questionary>=2.1",
+]
+
+[project.scripts]
+canvas-materials = "canvas_course_materials.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
